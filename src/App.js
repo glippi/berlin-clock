@@ -1,25 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BerlinClock } from './BerlinClock';
+import { parseDate } from './clockEngine';
+
+function startClock() {
+  const today = new Date();
+  const h = today.getHours();
+  const m = today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes();
+  const s = today.getSeconds() < 10 ? `0${today.getSeconds()}` : today.getSeconds();
+  return `${h}:${m}:${s}`;
+}
 
 function App() {
+  const [ time, setTime ] = useState('');
+
+  useEffect(() => {
+    setInterval(() => {
+      setTime(startClock());
+    }, 1000);
+  })
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          A simplified
+          <a
+            className="App-link"
+            href="https://en.wikipedia.org/wiki/Mengenlehreuhr"
+            target="_blank"
+            rel="noopener noreferrer">
+            {' '}Berlin Clock{' '}
+          </a>
+          implementation
         </p>
-        <a
+        <span
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <BerlinClock time={parseDate(time)} />
+          {time}
+      </span>
+    </header>
+  </div>
   );
 }
 
