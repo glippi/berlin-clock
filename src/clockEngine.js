@@ -7,5 +7,5 @@ export function parseDate(date) {
   const fourthRow = "Y".repeat(minutes / 5) + "O".repeat(11 - parseInt(minutes / 5));
   const lastRow = "Y".repeat(minutes % 5) + "O".repeat(4 - minutes % 5);
 
-  return `${firstRow}\n${secondRow}\n${thirdRow}\n${fourthRow}\n${lastRow}`;
+  return [ firstRow, secondRow, thirdRow, fourthRow, lastRow ];
 }
