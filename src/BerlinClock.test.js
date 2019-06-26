@@ -3,7 +3,15 @@ import { BerlinClock } from './BerlinClock';
 import { render } from '@testing-library/react';
 
 describe('BerlinClock should', () => {
-  test('render a yellow circle if second is even', () => {
-    const { getByTestId, debug } = render(<BerlinClock time="Y" />);
+  test('render seconds, hours and minutes', () => {
+    const { getByTestId } = render(<BerlinClock time={["Y","ROOO","ROOO","OOOOOOOOOOO","OOOO"]} />);
+
+    const seconds = getByTestId("seconds");
+    const hours = getByTestId("hours");
+    const minutes = getByTestId("minutes")
+
+    expect(seconds).toBeTruthy();
+    expect(hours).toBeTruthy();
+    expect(minutes).toBeTruthy();
   });
-}); 
+});
