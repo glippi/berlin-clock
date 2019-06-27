@@ -1,4 +1,4 @@
-import { parseDate } from './clockEngine'
+import { parseDate } from './clockEngine';
 
 describe('Berlin clock should', () => {
   it.each`
