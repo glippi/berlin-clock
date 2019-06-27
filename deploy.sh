@@ -5,7 +5,7 @@ git branch -d gh-pages
 # recreate branch gh-pages
 git checkout -b gh-pages HEAD
 # run production build on gh-pages branch
-yarn CI=false && build
+yarn CI="" && build
 # delete all files except from build folder
 sudo rm -rf src/ public/ other/ node_modules/ .circleci/ yarn.lock README.md package.json deploy.sh .gitignore package-json.lock
 # copy all build files in the main directory
