@@ -8,4 +8,10 @@ describe('App should', () => {
 
     expect(getByTestId('berlin-clock')).toBeTruthy();
   });
+
+  test('render StandardClock', () => {
+    const { getByTestId } = render(<App />);
+
+    expect(getByTestId('standard-clock')).toBeTruthy();
+  });
 });
