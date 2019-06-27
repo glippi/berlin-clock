@@ -4,7 +4,7 @@ export function Hours({ hours }) {
   const hourColor = hour => hour === 'R' ? "bg-red" : "bg-dark-gray";
 
   return (
-    <div data-testid="hours" className="w5">
+    <div data-testid="hours">
       {hours.map((hour, i) => (
         <div key={i} className="flex flex-row justify-center items-center w5">
           {hour && hour.split('').map((h, idx) => (

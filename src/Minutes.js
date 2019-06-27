@@ -4,7 +4,7 @@ export function Minutes({ minutes }) {
   const minuteColor = minute => minute === 'Y' ? "bg-yellow" : "bg-dark-gray";
 
   return (
-    <div data-testid="minutes" className="w5">
+    <div data-testid="minutes">
       {minutes.map((minute, i) => (
         <div key={i} className="flex flex-row w5">
           {minute && minute.split('').map((m, idx) => (

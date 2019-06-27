@@ -10,7 +10,7 @@ export function BerlinClock({ time }) {
   const minutes = [ fourthRow, lastRow ];
 
   return (
-    <div data-testid="berlin-clock" className="flex flex-column justify-center items-center w5">
+    <div data-testid="berlin-clock" className="flex flex-column justify-center items-center">
       <Seconds seconds={seconds} />
       <Hours hours={hours} />
       <Minutes minutes={minutes} />

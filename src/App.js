@@ -23,10 +23,10 @@ function App() {
   const fromLocaleToBerlinFormat = parseDate(time);
 
   return (
-    <div className="App w-100">
-      <header className="App-header">
-        <p>
-          A simplified
+    <main>
+      <header className="pa3">
+        <h1>
+          The
           <a
             className="App-link"
             href="https://en.wikipedia.org/wiki/Mengenlehreuhr"
@@ -34,16 +34,15 @@ function App() {
             rel="noopener noreferrer">
             {' '}Berlin Clock{' '}
           </a>
-          implementation
-        </p>
-        <span
-          className="App-link"
-        >
-        </span>
+        </h1>
       </header>
-      {time}
-      <BerlinClock time={fromLocaleToBerlinFormat} />
-    </div>
+
+      <section className="flex flex-row justify-around items-center">
+        {time}
+        <BerlinClock time={fromLocaleToBerlinFormat} />
+      </section>
+
+    </main>
   );
 }
 
