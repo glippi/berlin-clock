@@ -1,12 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Seconds } from './Seconds';
+import { Hours } from './Hours';
+import { Minutes } from './Minutes';
 
 export function BerlinClock({ time }) {
-  const seconds = time[0];
+  const [ firstRow, secondRow, thirdRow, fourthRow, lastRow ] = time;
+  const seconds = firstRow;
+  const hours = [ secondRow, thirdRow ];
+  const minutes = [ fourthRow, lastRow ];
 
   return (
-    <div data-testid="berlin-clock" className="flex flex-row justify-center items-center">
+    <div data-testid="berlin-clock" className="flex flex-column justify-center items-center w5">
       <Seconds seconds={seconds} />
-      </div>
-    )
-  }
+      <Hours hours={hours} />
+      <Minutes minutes={minutes} />
+    </div>
+  )
+}
