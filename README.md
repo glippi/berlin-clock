@@ -3,8 +3,6 @@
 <div align="center">
   <h1>Berlin Clock</h1>
   <img
-    height="80"
-    width="80"
     alt="berlin-clock"
     src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Berlin-Uhr-1650-1705.gif"
     />
