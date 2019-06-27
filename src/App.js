@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BerlinClock } from './BerlinClock';
 import { parseDate } from './clockEngine';
@@ -19,12 +18,13 @@ function App() {
     setInterval(() => {
       setTime(startClock());
     }, 1000);
-  })
+  });
+
+  const fromLocaleToBerlinFormat = parseDate(time);
 
   return (
-    <div className="App">
+    <div className="App w-100">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           A simplified
           <a
@@ -39,11 +39,11 @@ function App() {
         <span
           className="App-link"
         >
-          <BerlinClock time={parseDate(time)} />
-          {time}
-      </span>
-    </header>
-  </div>
+        </span>
+      </header>
+      {time}
+      <BerlinClock time={fromLocaleToBerlinFormat} />
+    </div>
   );
 }
 
