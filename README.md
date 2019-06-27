@@ -1,7 +1,17 @@
 [![CircleCI](https://circleci.com/gh/glippi/berlin-clock.svg?style=svg)](https://circleci.com/gh/glippi/berlin-clock)
 
-# :de: :clock1: Berlin Clock
-> implementation of the berlin clock kata
+<div align="center">
+  <h1>Berlin Clock</h1>
+  <img
+    height="80"
+    width="80"
+    alt="berlin-clock"
+    src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Berlin-Uhr-1650-1705.gif"
+    />
+
+  > implementation of the berlin clock kata
+</div>
+
 
 This project contains the implementation of the berlin clock kata. It's made of
 two main parts: the **clock engine** and the **UI**. Everything is completely
