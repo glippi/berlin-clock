@@ -45,5 +45,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "^8.0.4"
-  }
+  },
+  "homepage": "https://glippi.github.io/berlin-clock"
 }
