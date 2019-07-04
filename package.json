@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/jest": "^24.0.15",
     "husky": "^2.4.1",
     "lint-staged": "^8.2.1",
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "tachyons": "^4.11.1"
+    "tachyons": "^4.11.1",
+    "typescript": "^3.5.2"
   },
   "husky": {
     "hooks": {
