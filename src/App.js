@@ -26,27 +26,39 @@ function App() {
   const fromLocaleToBerlinFormat = parseDate(time)
 
   return (
-    <main>
-      <header className="pa3">
-        <h1>
-          The
+    <div
+      className="w-100 h-100 bg-near-white"
+      style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}
+    >
+      <header
+        className="ph3 ph5-ns pv5"
+        style={{ alignSelf: 'center', justifySelf: 'center' }}
+      >
+        <h1 className="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
           <a
-            className="App-link"
+            className="link dim black"
             href="https://en.wikipedia.org/wiki/Mengenlehreuhr"
             target="_blank"
             rel="noopener noreferrer"
           >
             {' '}
-            Berlin Clock{' '}
+            The Berlin Clock{' '}
           </a>
         </h1>
+        <h2 className="f3 mid-gray lh-title">
+          telling the time to the world by means of illuminated, coloured fields
+        </h2>
+        <time className="f6 ttu tracked gray">since 17 june 1975</time>
       </header>
 
-      <section className="flex flex-row justify-around items-center">
+      <div
+        className="flex flex-column items-center"
+        style={{ display: 'grid', gridTemplateRows: '50% 50%' }}
+      >
         <StandardClock time={time} />
         <BerlinClock time={fromLocaleToBerlinFormat} />
-      </section>
-    </main>
+      </div>
+    </div>
   )
 }
 
