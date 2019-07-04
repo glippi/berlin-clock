@@ -4,11 +4,9 @@ export function StandardClock({ time }) {
   return (
     <div
       data-testid="standard-clock"
+      className="f2"
       style={{
         fontFamily: 'Orbitron, sans-serif',
-        alignSelf: 'center',
-        justifySelf: 'center',
-        fontSize: '3.5rem',
       }}
     >
       {time}

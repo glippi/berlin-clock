@@ -12,8 +12,7 @@ export function BerlinClock({ time }) {
   return (
     <div
       data-testid="berlin-clock"
-      className="flex flex-column justify-center items-center"
-      style={{ alignSelf: 'center', justifySelf: 'center' }}
+      className="flex flex-column justify-center items-center mv4"
     >
       <Seconds seconds={seconds} />
       <Hours hours={hours} />

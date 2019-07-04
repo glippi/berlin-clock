@@ -18,15 +18,12 @@ function App() {
   const fromLocaleToBerlinFormat = parseDate(time)
 
   return (
-    <div
-      className="w-100 h-100 bg-near-white"
-      style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}
-    >
+    <div className="w-100 h-100 flex flex-column items-center bg-near-white">
       <BerlinClockTitle />
 
-      <div style={{ display: 'grid', gridTemplateRows: '50% 50%' }}>
-        <StandardClock time={time} />
+      <div className="flex flex-column items-center">
         <BerlinClock time={fromLocaleToBerlinFormat} />
+        <StandardClock time={time} />
       </div>
     </div>
   )
