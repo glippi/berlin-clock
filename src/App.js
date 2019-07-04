@@ -3,23 +3,14 @@ import './App.css'
 import { BerlinClock } from './BerlinClock'
 import { StandardClock } from './StandardClock'
 import { parseDate } from './clockEngine'
-
-function startClock() {
-  const today = new Date()
-  const h = today.getHours()
-  const m =
-    today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes()
-  const s =
-    today.getSeconds() < 10 ? `0${today.getSeconds()}` : today.getSeconds()
-  return `${h}:${m}:${s}`
-}
+import { startClock } from './startClock'
 
 function App() {
   const [time, setTime] = useState('')
 
   useEffect(() => {
     setInterval(() => {
-      setTime(startClock())
+      setTime(startClock(new Date()))
     }, 1000)
   })
 
