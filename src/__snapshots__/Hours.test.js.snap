@@ -8,13 +8,13 @@ exports[`Hours should render a red rectangle, three gray rectangles, a red recta
     class="h3 ba pa2 bg-red"
   />
   <div
-    class="h3 ba pa2 bg-dark-gray"
+    class="h3 ba pa2 bg-silver"
   />
   <div
-    class="h3 ba pa2 bg-dark-gray"
+    class="h3 ba pa2 bg-silver"
   />
   <div
-    class="h3 ba pa2 bg-dark-gray"
+    class="h3 ba pa2 bg-silver"
   />
 </div>
 `;
