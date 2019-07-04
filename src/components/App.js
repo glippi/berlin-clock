@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { BerlinClockTitle } from './BerlinClockTitle'
 import { BerlinClock } from './BerlinClock'
 import { StandardClock } from './StandardClock'
-import { parseDate } from './clockEngine'
-import { startClock } from './startClock'
-import { BerlinClockTitle } from './BerlinClockTitle'
+import { parseDate } from '../lib/clockEngine'
+import { startClock } from '../lib/startClock'
 
 function App() {
   const [time, setTime] = useState('')

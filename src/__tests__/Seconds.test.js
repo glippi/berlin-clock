@@ -1,5 +1,5 @@
 import React from 'react'
-import { Seconds } from './Seconds'
+import { Seconds } from '../components/Seconds'
 import { render, cleanup } from '@testing-library/react'
 
 afterEach(cleanup)

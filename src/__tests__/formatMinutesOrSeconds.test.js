@@ -1,4 +1,4 @@
-import { formatMinutesOrSeconds } from './formatMinutesOrSeconds'
+import { formatMinutesOrSeconds } from '../lib/formatMinutesOrSeconds'
 
 let _Date
 

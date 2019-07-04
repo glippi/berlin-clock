@@ -1,4 +1,4 @@
-import { startClock } from './startClock'
+import { startClock } from '../lib/startClock'
 
 let _Date
 
