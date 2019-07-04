@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 export function Seconds({ seconds }) {
-    const secondsColor = seconds === 'Y' ? 'bg-yellow' : 'bg-dark-gray';
+  const secondsColor = seconds === 'Y' ? 'bg-yellow' : 'bg-silver'
 
-    return (
-      <div data-testid="seconds" className={`w3 h3 br-100 ${secondsColor}`} />
-    )
+  return (
+    <div data-testid="seconds" className={`w3 h3 ba br-100 ${secondsColor}`} />
+  )
 }
