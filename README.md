@@ -11,17 +11,19 @@
 </div>
 
 
-This project contains the implementation of the berlin clock kata. It's made of
+Simple implementation of the berlin clock kata. It's made of
 two main parts: the **clock engine** and the **UI**. Everything is completely
 driven by **tests**, with `Jest` and `@testing-library/react`.
 
 ## Clock engine
 
-The file `clockEngine.js` contains the code responsible for translating the Date
-into the format expected by the Berlin Clock. The file `clockEngine.test.js`
-contains the tests - this is the case for leveraging parameterized tests,
-running multiple cases in a cleaner, simpler and more readable way.
+The file `clockEngine.js` contains the code responsible for translating the `Date`
+into the format expected by the Berlin Clock. This was a good case for
+leveraging parameterized tests (see `clockEngine.test.js`).
 
+The function `startClock` is responsible for starting the timer, and expects a
+Date. For this reason, in the tests `startClock.test.js` we used mocked date in
+order to have full control of the expected output of the function unders test.
 
 ## UI
 
