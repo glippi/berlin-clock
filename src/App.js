@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './App.css'
 import { BerlinClock } from './BerlinClock'
 import { StandardClock } from './StandardClock'
 import { parseDate } from './clockEngine'
